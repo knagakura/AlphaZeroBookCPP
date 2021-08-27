@@ -17,3 +17,6 @@ venv/
 8_game/8_3_simple_shogi/**.py
 8_game/8_3_simple_shogi/**.png
 8_game/8_3_simple_shogi/model/
+
+finish_venv.sh
+init_venv.sh
