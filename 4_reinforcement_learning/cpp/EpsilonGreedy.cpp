@@ -26,16 +26,16 @@ pair<vector<int>, vector<float>> play(EpsilonGreedy &epsilonGreedy,
     }
     return {times, rewards};
 }
+
 int main() {
-    vector<SlotArm> arms = {SlotArm(0.1), SlotArm(0.2), SlotArm(0.3), SlotArm(0.5), SlotArm(0.9)};
+    vector<SlotArm> arms = {SlotArm(0.1), SlotArm(0.2), SlotArm(0.3),
+                            SlotArm(0.5), SlotArm(0.9)};
     EpsilonGreedy epsilonGreedy(0.1);
     auto [times, rewards] = play(epsilonGreedy, arms, 1000, 250);
     rep(j, 250) {
         float mean = 0;
-        rep(i, 1000) {
-            mean += rewards[i * 250 + j];
-        }
+        rep(i, 1000) { mean += rewards[i * 250 + j]; }
         mean /= 1000;
-        cout << j+1 << "," << mean << endl;
+        cout << j + 1 << "," << mean << endl;
     }
 }

@@ -20,3 +20,6 @@ venv/
 
 finish_venv.sh
 init_venv.sh
+
+*.out
+out*
