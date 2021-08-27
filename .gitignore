@@ -23,3 +23,5 @@ init_venv.sh
 
 *.out
 out*
+
+*ipynb
